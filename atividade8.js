@@ -1,17 +1,17 @@
 const prompt = require("prompt-sync") ( );
-r1 = +prompt("Primeiro segmento: ");
-r2 = +prompt("Segundo segmento: ");
-r3 = +prompt("Teceiro segmento: ");
-
-if (r1 < r2 + r3 && r2 < r1 + r3 && r3 < r1 + r2){
-    console.log("Os segmentos acima podem formar Triângulo");
-    if (r1 == r2 == r3){
-        console.log("Equilátero");
-    }
-        else if (r1 != r2 != r3 != r1){
-            console.log("Escaleno");
-        }   else
-            console.log("Isósceles")
-    }
+const valor1 = +prompt("Digite o primeiro valor: ");
+const valor2 = +prompt("Digite o segundo valor: ");
+const multiplo = valor1/valor2 == 0;
+if (valor1 > valor2 || valor1 == valor2){
+    if(valor1 % valor2 == 0)
+        console.log(`Os valores ${valor1} e ${valor2} são múltiplos. `);
         else{
-    console.log("Os segmentos acima não podem formar triângulo");}
+            console.log(`Os valores ${valor1} e ${valor2} não são múltiplos. `);
+    }
+}   else{
+        if(valor2 % valor1 == 0)
+            console.log(`Os valores ${valor1} e ${valor2} são múltiplos. `);
+        else{
+            console.log(`Os valores ${valor1} e ${valor2} são múltiplos. `); 
+        }
+}
