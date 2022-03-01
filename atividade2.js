@@ -1,9 +1,13 @@
-const  prompt = require ("prompt-sync") ( ) ;
-let peca1 = prompt("Qual o nome da peça? ");
-let qtdp1 = parseInt(prompt("Quantas peças? "));
-let precop1 = parseInt(prompt("Qual o valor da peça? "));
-let peca2 = prompt("Qual o nome da peça? ");
-let qtdp2 = parseInt(prompt("Quantas peças? "));
-let precop2 = parseInt(prompt("Qual o valor da peça? "));
-let valor = (qtdp1 * precop1) + (qtdp2 * precop2);
-console.log("O valor total é", valor)
+const  prompt  = require ("prompt-sync") ( ) ;
+const nota1 = +prompt("Digite a primeira nota: ");
+const nota2 = +prompt("Digite a segunda nota: ");
+const nota3 = +prompt("Digite a terceira nota: ");
+const nota4 = +prompt("Digite a quarta nota: ");
+const media = (nota1 +nota2 + nota3 + nota4) / 4;
+if (media >= 7){
+        console.log(`APROVADO! (${media}) `);
+}   else if (media > 5 && media < 7){
+        console.log(`EM RECUPARAÇÃO! (${media}) `);
+}   else{
+        console.log(`REPROVADO! (${media})`);
+}
