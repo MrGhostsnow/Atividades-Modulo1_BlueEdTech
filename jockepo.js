@@ -26,10 +26,8 @@ console.log(`As opções são:
     5 - spock
     `);
 for(let i = 0; i < rodadas; i++){
-    //if(rodadas > 0){
         const jogador = prompt("Qual opção você escolhe? ");
         const computador = escolha[Math.floor(Math.random() * escolha.length)];
-        //rodadas--;
         if(jogador === "tesoura" && computador === "papel"){
             console.log(`Você escolheu ${jogador} e o computador escolheu ${computador}
             tesoura corta papel`);
@@ -157,7 +155,6 @@ for(let i = 0; i < rodadas; i++){
              jogo();
         }else{
              console.log("Vamos ver os resultados!!!") ;
-            //break;
         } 
     }
 }
